@@ -1,0 +1,143 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.appContainer {
+  font: 16px Cambrai;
+}
+
+#header {
+  overflow: hidden;
+  height: 100%;
+}
+#appNavBar,
+#header {
+  background-image: linear-gradient(#ab6dc2, #9519b9);
+}
+.header-title,
+.header-para {
+  color: #fff;
+}
+
+.header-btn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  color: #9519b9;
+}
+.waveimg {
+  height: 120px;
+  width: 100%;
+}
+.app-box {
+  background-image: linear-gradient(#ab6dc2, #9519b9);
+  color: #fff;
+  padding: 10px;
+}
+.app-body {
+  margin-top: 20px;
+}
+.app-btn {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.app-btn:hover {
+  background-color: black;
+  color: #9519b9;
+}
+.app-body p {
+  padding: 30px;
+  text-align: justify;
+}
+.card {
+  background-color: #9519b9;
+  color: #fff;
+  padding: 0;
+  margin: 40px;
+}
+.product-img {
+  background-color: #fff;
+}
+.card-btn {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  background-color: #fff;
+  color: #9519b9;
+  line-height: 40px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.card-btn:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: black;
+}
+#footer {
+  background-image: linear-gradient(#ab6dc2, #9519b9);
+  color: #fff;
+  padding: 20px;
+}
+#footer-bar {
+  text-align: center;
+  border-top: 1px solid gray;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.down-arr {
+  margin-left: 120px;
+}
+.down-arr1 {
+  margin-left: 126px;
+}
+.drop:hover {
+  background-color: #636e72;
+}
+.drop:hover a {
+  color: #fff;
+}
+.down-arr2 {
+  margin-left: 144px;
+}
