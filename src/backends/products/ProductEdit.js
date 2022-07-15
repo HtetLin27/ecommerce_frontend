@@ -53,7 +53,7 @@ class ProductEdit extends React.Component{
         sendData =(file,e)=>{
            e.preventDefault();
            const formData = new FormData();
-           formData.append ("image",file.file);
+           formData.append ("image",this.state.file.file);
            const dataPath ={
             title:this.titleRef.current.value,
             des:this.desRef.current.value,

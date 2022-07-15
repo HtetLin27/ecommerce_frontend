@@ -18,7 +18,7 @@ const [data,setData] =useState([]);
                     data.map(e=>{
                         return(
                             <div className="col-md-4">
-                            {/* <img src={"http://127.0.0.1:8000/images/"+e.image} alt="social"/> */}
+                            <img src={"http://127.0.0.1:8000/images/"+e.image} alt="social"/>
                             <h2 className="mt-3">{e.title}</h2>
                             <p className="text-justify">{e.description}</p>
                             </div>

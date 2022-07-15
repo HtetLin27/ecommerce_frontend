@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 const axios =require('axios');
 
@@ -55,10 +56,12 @@ function sendData(e,setMessage,setCheck){
    }).then(function(response){
     setCheck(true);
   setMessage(response.data.message);
+  console.log(response.data.status)
   if(response.data.status === true){
-    localStorage.setItem("token",123456);
+    localStorage.setItem("token",response.data.token);
     window.location.href ='/admin/products';
   }
    })
 }
 export default Login;
+

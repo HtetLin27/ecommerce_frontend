@@ -54,10 +54,15 @@ function sendData(file,e,setMessage,setCheck){
    const formData = new FormData();
    formData.append("data",JSON.stringify(dataValue));
    formData.append("image",file.file);
+   var reqToken = localStorage.getItem('token');
    axios({
     url:'http://127.0.0.1:8000/service',
     method:'post',
-    data:formData
+    data:formData,
+    headers:{
+      'Authorization':`Basic ${reqToken}`
+    }
+
    }).then(function(response){
     setCheck(true);
   setMessage(response.data.message)
