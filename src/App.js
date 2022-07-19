@@ -5,6 +5,9 @@ import{BrowserRouter,Routes,Route} from 'react-router-dom';
 import Backend from './backends/Backend';
 import Login from './frontends/Login';
 import LogOut from './frontends/LogOut';
+import ProductList from './frontends/ProductList';
+import CheckOut from './frontends/CheckOut';
+
 
 function App() {
   if(localStorage.getItem("token")){
@@ -37,6 +40,8 @@ function App() {
      <div>
        <Routes>
         <Route path='/' element={<Frondends/>}></Route>
+        <Route path='/products' element={<ProductList/>}></Route>
+        <Route path='/checkout' element={<CheckOut/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
        </Routes>
      </div>

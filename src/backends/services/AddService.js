@@ -59,9 +59,9 @@ function sendData(file,e,setMessage,setCheck){
     url:'http://127.0.0.1:8000/service',
     method:'post',
     data:formData,
-    headers:{
-      'Authorization':`Basic ${reqToken}`
-    }
+    // headers:{
+    //   'Authorization':`Basic ${reqToken}`
+    // }
 
    }).then(function(response){
     setCheck(true);

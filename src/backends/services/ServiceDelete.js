@@ -6,9 +6,9 @@ function ServiceDelete(props){
     axios({
         method:"post",
         url:"http://127.0.0.1:8000/services/"+props.id+"/delete",
-        headers:{
-            "Authorization":`Basic ${token}`
-        }
+        // headers:{
+        //     "Authorization":`Basic ${token}`
+        // }
     }).then(response=>{
         window.location.href ="/admin/services";
     })
