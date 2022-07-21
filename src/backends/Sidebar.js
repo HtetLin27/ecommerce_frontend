@@ -70,6 +70,9 @@ function Sidebar(){
     </div>
 </div>
 <div className="pl-3 pt-2 drop pb-2 font-weight-bold">
+        <a href="/order" ><i className="fa-solid fa-list-check"></i> Order</a>
+    </div>
+<div className="pl-3 pt-2 drop pb-2 font-weight-bold">
         <a href="/logout" ><i class="fa-solid fa-power-off"></i> Logout</a>
     </div>
 </div>

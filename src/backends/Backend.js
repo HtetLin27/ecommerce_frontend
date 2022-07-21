@@ -13,6 +13,8 @@ import ServiceDelete from './services/ServiceDelete';
 import AddUser from './users/AddUser';
 import Users from './users/Users';
 import UserDelete from './users/UserDelete';
+import Order from '../frontends/Order';
+import OrderList from '../frontends/OrderList';
 
 
 function Backend(props){
@@ -42,6 +44,8 @@ function Backend(props){
             return <Services></Services>
         }else if(pathLocation.pathname === '/admin/user'){
             return <AddUser></AddUser>
+        }else if(pathLocation.pathname === '/order'){
+            return <Order></Order>
         }else if(pathLocation.pathname === '/admin/users'){
             return <Users></Users>
         }
@@ -52,6 +56,8 @@ function Backend(props){
                 }else if(props.action.delete === true){
                     return <ProductDelete id={param.id}></ProductDelete>
                 }
+            
+                
             }else if(props.action.name === "service"){
                 if(props.action.update === true){
                      return<ServiceEdit id={param.id}></ServiceEdit>
@@ -62,7 +68,8 @@ function Backend(props){
                 if(props.action.delete === true){
                     return<UserDelete id={param.id}></UserDelete>
                 }
-            }
+            }else if(props.action.name === "order"){
+                return <OrderList customerId ={param.id} ></OrderList>}
         }
         else{
             return <Products></Products>

@@ -65,23 +65,25 @@ const CheckOut =()=>{
   </div>
 
  <br/><br/>
-  <button type="submit" onClick={(e)=> sendData(e,setMessage,setCheck)} className="btn btn-primary"> <i className="fa-solid fa-circle-plus"></i> Confirm</button>
+  <button type="submit" onClick={(e)=> sendData(e,setMessage,setCheck,cartArr)} className="btn btn-primary"> <i className="fa-solid fa-circle-plus"></i> Confirm</button>
 </form>
         </div>
     )
 }
 
-function sendData(e,setMessage,setCheck){
+function sendData(e,setMessage,setCheck,cartArr){
     e.preventDefault();
    let dataValue ={
     username:usernameRef.current.value,
     phone:phoneRef.current.value,
    }
+  
    console.log(dataValue)
 
    
    const formData = new FormData();
    formData.append("data",JSON.stringify(dataValue));
+   formData.append("cart",JSON.stringify({order:cartArr}));
    axios({
     url:'http://127.0.0.1:8000/customer/',
     method:'post',

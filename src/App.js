@@ -7,6 +7,7 @@ import Login from './frontends/Login';
 import LogOut from './frontends/LogOut';
 import ProductList from './frontends/ProductList';
 import CheckOut from './frontends/CheckOut';
+import Order from './frontends/Order';
 
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
         <Route path='/admin/products/:id/delete' element={<Backend action={{name:"product",update:false,delete:true}} condi={true}/>}></Route>
         <Route path='/admin/users/:id/delete' element={<Backend action={{name:"user",update:false,delete:true}} condi={true}/>}></Route>
         <Route path='/logout' element={<LogOut/>}></Route>
-
+        <Route path='/order' element={<Backend/>}></Route>
+        <Route path='/order/detail/:id' element={<Backend action={{name:"order"}} condi={true}/>}></Route>
       </Routes>
       </BrowserRouter>
     
